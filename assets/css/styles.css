@@ -113,7 +113,8 @@ header .title h1::after {
     content: '';
     display: block;
     position: relative;
-    left: 2px;
+    top: -5px;
+    left: 2.5px;
     width: 32px;
     height: 3px;
     background: #25d;
@@ -156,7 +157,7 @@ header .icon-menu::after {
     height: 0;
     border-radius: 80px;
     background: #25d2;
-    transition: all .3s ease-out;
+    transition: all 250ms ease-out;
 }
 
 header .icon-menu:hover::after {
@@ -302,6 +303,35 @@ footer .container .quick-links {
 
 footer .container .contact {
     width: calc(30% - 10px);
+}
+
+footer .copyright {
+    color: #eee;
+    font-family: 'Poppins-Regular';
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+footer .copyright > a {
+    color: #fffc;
+    text-decoration: none;
+}
+
+footer .copyright > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff0;
+    transition: all 750ms ease;
+}
+
+footer .copyright a:hover::after {
+    width: 100%;
+    background: #fff;
 }
 /* footer end */
 
