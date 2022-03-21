@@ -1,4 +1,4 @@
-
+/* basic rules */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -13,7 +13,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body, div, span, applet, object, iframe,
@@ -30,14 +29,14 @@ summary, time, mark, audio, video { box-sizing: inherit; }
 
 html { box-sizing: border-box; }
 
-h1, h2, h3, h4, b {
+h1, h2, h3, h4, h5, b {
     font-weight: 500;
-    /* font-family: 'SourceSansPro-Bold'; */
+    font-family: 'SourceSansPro-Bold';
 }
 
 b i {
     font-weight: 500;
-    /* font-family: 'SourceSansPro-BoldItalic'; */
+    font-family: 'SourceSansPro-BoldItalic';
 }
 
 svg:not(:root) { display: block; }
@@ -66,11 +65,100 @@ h1, h2, h3, h4, h5, p, span {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+/* basic rules end */
 
-/* end default rules */
+/* header */
+header {
+    background: #111;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title {
+    color: #25d;
+    margin: 20px;
+}
+
+header .title h1 {
+    font-family: 'Poppins-Regular';
+    font-weight: 500;
+    font-size: 2.5rem;
+    font-style: oblique;
+    font-synthesis: style;
+}
+
+header .title h1 span {
+    font-size: 3rem;
+    font-family: 'Poppins-Bold', 'SourceSansPro-Bold', sans-serif;
+    font-synthesis: style;
+    font-style: normal;
+}
+
+header .menu {
+    background: none;
+    margin: 20px;
+}
+
+header .menu .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+}
+
+header .menu .icon span,
+header .menu .icon span::after,
+header .menu .icon span::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 7px;
+    top: 0;
+    border-radius: 5px;
+    background: #25d;
+    position: relative;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+header .menu .icon span::after { top: -21px }
+header .menu .icon span::before { top: 14px }
+
+header .menu .icon.active span { background: transparent }
+
+header .menu .icon.active span::after {
+    transform: rotate(45deg);
+    top: -7px;
+}
+
+header .menu .icon.active span::before {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+
+header .menu .content {
+    display: none;
+    visibility: hidden;
+}
+
+header .menu .icon.active ~ .content {
+    display: block;
+    visibility: visible;
+}
+/* header end */
 
 /* main */
-main section {
-    width: 500px;
+main {
+    background: #226;
+    min-width: 50vw;
+    min-height: 50vh;
 }
 /* end main */
