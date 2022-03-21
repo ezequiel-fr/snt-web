@@ -13,6 +13,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body, div, span, applet, object, iframe,
@@ -70,7 +71,7 @@ h1, h2, h3, h4, h5, p, span {
 /* header */
 header {
     background: #111;
-    min-height: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -86,6 +87,11 @@ header > div {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+header .first-part {
+    background: #111;
+    z-index: 3;
 }
 
 header .title {
@@ -150,7 +156,7 @@ header .icon-menu::after {
     height: 0;
     border-radius: 80px;
     background: #25d2;
-    transition: all .4s ease-out;
+    transition: all .3s ease-out;
 }
 
 header .icon-menu:hover::after {
@@ -189,7 +195,38 @@ header .icon-menu.active span::before {
 }
 
 header .second-part {
-    display: none;
+    display: block;
+    position: relative;
+    opacity: 0;
+    top: -50px;
+    height: 50px;
+    z-index: 0;
+    background: #111;
+    transition: all .5s ease-in-out;
+}
+
+header .second-part.active {
+    opacity: 1;
+    top: 0;
+}
+
+header .second-part ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+header .second-part ul > ol {
+    margin: 12px;
+    font-family: 'SourceSansPro-Regular';
+    font-size: 1.1rem;
+    color: #ffd;
+}
+
+header .second-part ul > ol a {
+    color: none;
+    text-decoration: none;
 }
 /* header end */
 
