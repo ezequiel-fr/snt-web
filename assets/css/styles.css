@@ -278,6 +278,7 @@ footer .container {
 footer .container > div {
     min-width: 150px;
     min-height: 100px;
+    padding: 0 5px;
 }
 
 footer .container > div h2 {
@@ -297,11 +298,9 @@ footer .container .about-us {
     width: calc(40% - 10px);
 }
 
-footer .container .quick-links {
-    width: calc(30% - 10px);
-}
-
+footer .container .quick-links,
 footer .container .contact {
+    border-left: 1px solid #fff8;
     width: calc(30% - 10px);
 }
 
