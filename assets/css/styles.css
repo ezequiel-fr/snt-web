@@ -40,17 +40,24 @@ b i {
     font-family: 'SourceSansPro-BoldItalic';
 }
 
+:root {
+    --primary-color: #25d;
+    --secondary-color: #222;
+    --white: #fff;
+    --black: #000;
+}
+
 svg:not(:root) { display: block; }
 
 ::-webkit-scrollbar {
-    background: #222;
+    background: var(--secondary-color);
     width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: 6px;
-    border: 2px solid #222;
+    border: 2px solid var(--secondary-color);
 }
 
 ::selection {
@@ -70,13 +77,17 @@ h1, h2, h3, h4, h5, p, span {
 
 /* header */
 header {
-    background: #222;
+    background: var(--secondary-color);
     height: 100px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     flex-flow: column nowrap;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header > div {
@@ -87,7 +98,7 @@ header > div {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background: #222;
+    background: var(--secondary-color);
 }
 
 header .first-part {
@@ -247,21 +258,21 @@ header .second-part ul > ol:hover a::after {
 
 /* main */
 main {
-    background: #ccc;
+    background: #eee;
     min-width: 50vw;
-    min-height: 50vh;
+    min-height: calc(100vh - 400px);
+    margin-top: 100px;
 }
 /* end main */
 
 /* footer */
 footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     flex-flow: column nowrap;
-    background: #222;
+    background: var(--secondary-color);
     width: 100%;
     min-height: 100px;
 }
@@ -308,6 +319,41 @@ footer .container .contact {
     border-left: 2px solid #fff5;
     border-radius: 2px;
     width: calc(30% - 10px);
+}
+
+footer .container .contact {
+    background: #f00;
+    display: block;
+    min-width: 240px;
+}
+
+footer .container .contact .infos li {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .container .contact .infos li span:nth-child(1) img {
+    width: 30px;
+    fill: blue;
+}
+
+footer .container .contact .infos li span:nth-child(2) a {
+    text-decoration: none;
+    color: #eee;
+    font-family: 'Poppins-Regular';
+}
+
+footer .container .contact .infos li span:nth-child(2) a::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+    transition: all .4s ease;
+}
+
+footer .container .contact .infos li span:nth-child(2) a:hover::after {
+    width: 100%;
 }
 
 footer .copyright {
