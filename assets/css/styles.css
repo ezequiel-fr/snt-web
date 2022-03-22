@@ -278,7 +278,12 @@ footer .container {
 footer .container > div {
     min-width: 150px;
     min-height: 100px;
-    padding: 0 5px;
+    padding: 0 5px 0 4px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 footer .container > div h2 {
@@ -300,14 +305,15 @@ footer .container .about-us {
 
 footer .container .quick-links,
 footer .container .contact {
-    border-left: 1px solid #fff8;
+    border-left: 2px solid #fff5;
+    border-radius: 2px;
     width: calc(30% - 10px);
 }
 
 footer .copyright {
     color: #eee;
     font-family: 'Poppins-Regular';
-    margin-bottom: 8px;
+    margin: 10px 0;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -330,7 +336,7 @@ footer .copyright > a::after {
 
 footer .copyright a:hover::after {
     width: 100%;
-    background: #fff;
+    background: #fffb;
 }
 /* footer end */
 
