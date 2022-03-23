@@ -20,7 +20,7 @@ body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp, small,
-strike, strong, sub, sup, tt, var,b, u, i,
+strike, strong, sub, sup, tt, var, b, u, i,
 center, dl, dt, dd, ol, ul, li, fieldset, form,
 label, legend, table, caption, tbody, tfoot,
 thead, tr, th, td, article, aside, canvas,
@@ -84,7 +84,7 @@ svg:not(:root) { display: block; }
 }
 
 ::selection {
-    background: var(--grey-4)e;
+    background: #888e;
 }
 
 input[type="checkbox"] { cursor: pointer; }
@@ -258,11 +258,13 @@ header .second-part ul > ol {
     font-family: 'SourceSansPro-Regular';
     font-size: 1.1rem;
     color: #2ad;
+    user-select: none;
 }
 
 header .second-part ul > ol a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 header .second-part ul > ol a::after {
@@ -333,8 +335,34 @@ footer .container > div h2::after {
     margin-bottom: 5px;
 }
 
-footer .container .about-us {
-    width: calc(40% - 10px);
+footer .container > div .content a,
+footer .container > div .content li,
+footer .container > div .content img {
+    user-select: none;
+} 
+
+/* about-us */
+footer .container .about-us { width: calc(40% - 10px); }
+
+footer .container .about-us .content p {
+    font-family: 'Poppins-Light';
+    font-size: 1rem;
+    color: var(--white-3);
+    margin: 6px 0 12px;
+    word-wrap: normal;
+    word-break: keep-all;
+    word-spacing: 1px;
+}
+
+footer .container .about-us .content p .title {
+    color: var(--primary-color);
+    text-decoration: underline solid var(--primary-color) 1px;
+}
+
+footer .container .about-us .content p::first-letter {
+    font-family: 'SourceSansPro-Bold';
+    font-size: 1.3rem;
+    user-select: none;
 }
 
 footer .container .about-us .content ul {
@@ -348,8 +376,10 @@ footer .container .about-us .content ul li {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    margin: 0 5px;
+    margin: 2px 5px;
 }
+
+footer .container .about-us .content ul li:nth-child(1) { margin-left: 0; }
 
 footer .container .about-us .content ul li,
 footer .container .about-us .content ul li a {
@@ -431,6 +461,37 @@ footer .container .about-us .content ul li.instagram a img {
     height: 30px;
 }
 
+/* quick links */
+footer .container .quick-links .content ul {
+    list-style-type: circle;
+    margin: 12px 0 0 10px;
+}
+
+footer .container .quick-links .content ul li {
+    display: block;
+    color: var(--white-3);
+    font-family: 'Poppins-Light';
+    margin-bottom: 4px;
+    width: max-content;
+}
+
+footer .container .quick-links .content ul li:hover {
+    list-style-type: disc;
+}
+
+footer .container .quick-links .content ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: all linear 300ms;
+    text-decoration: underline solid 1px transparent;
+    width: 100%;
+}
+
+footer .container .quick-links .content ul li:hover a {
+    text-decoration: underline solid 1px var(--white-3);
+}
+
+/* contact */
 footer .container .contact {
     display: block;
     width: fit-content;
@@ -450,7 +511,7 @@ footer .container .contact .infos li span:nth-child(1) img {
     width: 32px;
     fill: blue;
     position: relative;
-    bottom: 6px;
+    bottom: 4px;
 }
 
 footer .container .contact .infos li span:nth-child(2) a {
@@ -465,7 +526,7 @@ footer .container .contact .infos li span:nth-child(2) a::after {
     width: 30px;
     height: 1px;
     background: var(--white);
-    transition: all .4s ease;
+    transition: all .5s ease;
 }
 
 footer .container .contact .infos li:hover span:nth-child(2) a::after {
@@ -480,10 +541,11 @@ footer .copyright {
     justify-content: center;
     text-align: center;
     width: 100%;
+    user-select: none;
 }
 
 footer .copyright > a {
-    color: var(--white)c;
+    color: #fffc;
     text-decoration: none;
 }
 
@@ -492,13 +554,13 @@ footer .copyright > a::after {
     display: block;
     width: 0;
     height: 1px;
-    background: var(--white)0;
+    background: #fff0;
     transition: all 750ms ease;
 }
 
 footer .copyright a:hover::after {
     width: 100%;
-    background: var(--white)b;
+    background: #fffb;
 }
 /* footer end */
 
