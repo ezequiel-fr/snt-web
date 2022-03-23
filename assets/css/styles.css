@@ -307,24 +307,39 @@ footer .container > div h2::after {
     display: block;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, #25d5 0%, #25d 55%, #25d5 100%);
+    background: linear-gradient(90deg, #25d5 0%, var(--primary-color) 55%, #25d5 100%);
+    margin-bottom: 5px;
 }
 
 footer .container .about-us {
     width: calc(40% - 10px);
 }
 
-footer .container .quick-links,
-footer .container .contact {
-    border-left: 2px solid #fff5;
-    border-radius: 2px;
-    width: calc(30% - 10px);
+footer .container .about-us .content ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer .container .about-us .content ul li {
+    width: 40px;
+    height: 40px;
+    background: #111a;
+    border-radius: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all .4s;
 }
 
 footer .container .contact {
-    background: #f00;
     display: block;
-    min-width: 240px;
+    width: fit-content;
+}
+
+footer .container .contact .infos {
+    position: relative;
+    top: 5px;
 }
 
 footer .container .contact .infos li {
@@ -333,8 +348,10 @@ footer .container .contact .infos li {
 }
 
 footer .container .contact .infos li span:nth-child(1) img {
-    width: 30px;
+    width: 32px;
     fill: blue;
+    position: relative;
+    bottom: 6px;
 }
 
 footer .container .contact .infos li span:nth-child(2) a {
@@ -352,7 +369,7 @@ footer .container .contact .infos li span:nth-child(2) a::after {
     transition: all .4s ease;
 }
 
-footer .container .contact .infos li span:nth-child(2) a:hover::after {
+footer .container .contact .infos li:hover span:nth-child(2) a::after {
     width: 100%;
 }
 
