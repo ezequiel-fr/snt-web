@@ -28,7 +28,10 @@ details, embed, figure, figcaption, footer,
 header, hgroup, menu, nav, output, ruby, section,
 summary, time, mark, audio, video { box-sizing: inherit; }
 
-html { box-sizing: border-box; }
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
 h1, h2, h3, h4, h5, b {
     font-weight: 500;
@@ -41,10 +44,30 @@ b i {
 }
 
 :root {
+    /* important colors */
     --primary-color: #25d;
     --secondary-color: #222;
+    /* white */
     --white: #fff;
+    --white-1: #eee;
+    --white-2: #ddd;
+    --white-3: #ccc;
+    /* grey */
+    --grey-1: #bbb;
+    --grey-2: #aaa;
+    --grey-3: #999;
+    --grey-4: #888;
+    --grey-5: #777;
+    --grey-6: #666;
+    --grey-7: #555;
+    --grey-8: #444;
+    /* black */
+    --black-1: #333;
+    --black-2: #222;
+    --black-3: #111;
     --black: #000;
+    /* others */
+    --background-theme: var(--white-1);
 }
 
 svg:not(:root) { display: block; }
@@ -55,13 +78,13 @@ svg:not(:root) { display: block; }
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #666;
+    background: var(--grey-6);
     border-radius: 6px;
     border: 2px solid var(--secondary-color);
 }
 
 ::selection {
-    background: #888e;
+    background: var(--grey-4)e;
 }
 
 input[type="checkbox"] { cursor: pointer; }
@@ -85,7 +108,7 @@ header {
     flex-wrap: nowrap;
     flex-flow: column nowrap;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
 }
@@ -106,7 +129,7 @@ header .first-part {
 }
 
 header .title {
-    color: #25d;
+    color: var(--primary-color);
     margin: 20px;
     cursor: pointer;
 }
@@ -128,7 +151,7 @@ header .title h1::after {
     left: 2.5px;
     width: 32px;
     height: 3px;
-    background: #25d;
+    background: var(--primary-color);
     border-radius: 3px;
     transition: all .5s ease;
 }
@@ -167,7 +190,7 @@ header .icon-menu::after {
     width: 0;
     height: 0;
     border-radius: 80px;
-    background: #25d2;
+    background: var(--primary-color)2;
     transition: all 250ms ease-out;
 }
 
@@ -185,7 +208,7 @@ header .icon-menu span::before {
     height: 5px;
     top: 0;
     border-radius: 5px;
-    background: #25d;
+    background: var(--primary-color);
     position: relative;
     cursor: pointer;
     transition: 300ms ease-in-out;
@@ -213,7 +236,7 @@ header .second-part {
     top: -50px;
     height: 50px;
     z-index: 0;
-    background: #222;
+    background: var(--black-2);
     transition: all .5s ease-in-out;
 }
 
@@ -258,16 +281,15 @@ header .second-part ul > ol:hover a::after {
 
 /* main */
 main {
-    background: #eee;
-    min-width: 50vw;
-    min-height: calc(100vh - 400px);
-    margin-top: 100px;
+    background: var(--background-theme);
+    width: 100vw;
 }
 /* end main */
 
 /* footer */
 footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -298,7 +320,7 @@ footer .container > div {
 }
 
 footer .container > div h2 {
-    color: #eee;
+    color: var(--white-1);
     width: fit-content;
 }
 
@@ -307,7 +329,7 @@ footer .container > div h2::after {
     display: block;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, #25d5 0%, var(--primary-color) 55%, #25d5 100%);
+    background: linear-gradient(90deg, var(--primary-color)5 0%, var(--primary-color) 55%, var(--primary-color)5 100%);
     margin-bottom: 5px;
 }
 
@@ -329,51 +351,82 @@ footer .container .about-us .content ul li {
     margin: 0 5px;
 }
 
-footer .container .about-us .content ul li a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    background: #111;
-    border-radius: 6px;
-}
-
 footer .container .about-us .content ul li,
-footer .container .about-us .content ul li a,
-footer .container .about-us .content ul li a span {
+footer .container .about-us .content ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+footer .container .about-us .content ul li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: #111;
+    border-radius: 6px;
+    transition: all linear 250ms;
+}
+
+footer .container .about-us .content ul li:hover a { background: var(--primary-color)a }
+
 footer .container .about-us .content ul li a span {
-    cursor: pointer;
-    background: #f00;
-    width: min-content;
-    height: min-content;
-    transition: all .4s;
+    display: block;
+    position: absolute;
+    background: transparent;
+    z-index: 0;
+    transition: all linear 250ms;
 }
 
 /* github */
-footer .container .about-us .content ul .github a span { border-radius: 15px }
+footer .container .about-us .content ul .github a span {
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+}
+
 footer .container .about-us .content ul .github:hover a span { background: var(--black) }
 
-/* instagram */
+/* instgram */
 footer .container .about-us .content ul .instagram a span {
     width: 20px;
     height: 20px;
     border-radius: 5px;
+    background: #d6249f;
+    background: radial-gradient(circle at 40% 100%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    opacity: 0;
 }
 
-/* youtube */
-/* footer .container .about-us .content ul .youtube a span {} */
+footer .container .about-us .content ul .instagram:hover a span { opacity: 1 }
 
-footer .container .about-us .content ul li:not(.instagram) a span img {
+/* youtube */
+footer .container .about-us .content ul .youtube a span {
+    height: 0;
+    width: 0;
+    border-top: 5.5px solid transparent;
+    border-bottom: 5.5px solid transparent;
+    border-left: 9px solid transparent;
+}
+
+footer .container .about-us .content ul .youtube:hover a span { border-left-color: var(--white) }
+
+footer .container .about-us .content ul .youtube:hover a img {
+    filter: invert(50%) sepia(100%) saturate(5500%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+footer .container .about-us .content ul li a img {
+    z-index: 1;
+    object-fit: contain;
+    filter: none;
+    transition: all linear 250ms;
+}
+
+footer .container .about-us .content ul li:not(.instagram) a img {
     width: 25px;
     height: 25px;
 }
 
-footer .container .about-us .content ul li.instagram a span img {
+footer .container .about-us .content ul li.instagram a img {
     width: 30px;
     height: 30px;
 }
@@ -402,7 +455,7 @@ footer .container .contact .infos li span:nth-child(1) img {
 
 footer .container .contact .infos li span:nth-child(2) a {
     text-decoration: none;
-    color: #eee;
+    color: var(--white-1);
     font-family: 'Poppins-Regular';
 }
 
@@ -411,7 +464,7 @@ footer .container .contact .infos li span:nth-child(2) a::after {
     display: block;
     width: 30px;
     height: 1px;
-    background: #fff;
+    background: var(--white);
     transition: all .4s ease;
 }
 
@@ -420,7 +473,7 @@ footer .container .contact .infos li:hover span:nth-child(2) a::after {
 }
 
 footer .copyright {
-    color: #eee;
+    color: var(--white-1);
     font-family: 'Poppins-Regular';
     margin: 10px 0;
     display: flex;
@@ -430,7 +483,7 @@ footer .copyright {
 }
 
 footer .copyright > a {
-    color: #fffc;
+    color: var(--white)c;
     text-decoration: none;
 }
 
@@ -439,20 +492,20 @@ footer .copyright > a::after {
     display: block;
     width: 0;
     height: 1px;
-    background: #fff0;
+    background: var(--white)0;
     transition: all 750ms ease;
 }
 
 footer .copyright a:hover::after {
     width: 100%;
-    background: #fffb;
+    background: var(--white)b;
 }
 /* footer end */
 
 /* media-screen */
 @media (max-width: 200px) {
     body {
-        background: #000;
+        background: var(--black);
     }
 }
 /* media-screen end */
