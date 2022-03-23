@@ -325,11 +325,57 @@ footer .container .about-us .content ul {
 footer .container .about-us .content ul li {
     width: 40px;
     height: 40px;
-    background: #111a;
     border-radius: 8px;
     margin: 0 5px;
+}
+
+footer .container .about-us .content ul li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: #111;
+    border-radius: 6px;
+}
+
+footer .container .about-us .content ul li,
+footer .container .about-us .content ul li a,
+footer .container .about-us .content ul li a span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .about-us .content ul li a span {
     cursor: pointer;
+    background: #f00;
+    width: min-content;
+    height: min-content;
     transition: all .4s;
+}
+
+/* github */
+footer .container .about-us .content ul .github a span { border-radius: 15px }
+footer .container .about-us .content ul .github:hover a span { background: var(--black) }
+
+/* instagram */
+footer .container .about-us .content ul .instagram a span {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+/* youtube */
+/* footer .container .about-us .content ul .youtube a span {} */
+
+footer .container .about-us .content ul li:not(.instagram) a span img {
+    width: 25px;
+    height: 25px;
+}
+
+footer .container .about-us .content ul li.instagram a span img {
+    width: 30px;
+    height: 30px;
 }
 
 footer .container .contact {
