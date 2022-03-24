@@ -89,7 +89,7 @@ svg:not(:root) { display: block; }
 
 input[type="checkbox"] { cursor: pointer; }
 
-h1, h2, h3, h4, h5, p, span {
+h1, h2, h3, h4, h5, p, a, span {
     cursor: default;
     user-select: none;
     -moz-user-select: none;
