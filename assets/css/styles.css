@@ -285,7 +285,7 @@ header .second-part ul > ol:hover a::after {
 /* main */
 main {
     background: var(--background-theme);
-    width: 100vw;
+    width: calc(100vw - 12px);
 }
 /* end main */
 

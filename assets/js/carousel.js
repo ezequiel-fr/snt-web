@@ -22,7 +22,10 @@ export default (carousel) => {
         return box;
     };
 
-    carousel.appendChild(arrow('left'));
+    var arrowLeft = arrow('left');
+    var arrowRight = arrow('right');
+
+    carousel.appendChild(arrowLeft);
 
     // container
     const container = document.createElement('div');
@@ -39,7 +42,7 @@ export default (carousel) => {
     carousel.appendChild(container);
 
     // last arrow
-    carousel.appendChild(arrow('right'));
+    carousel.appendChild(arrowRight);
 
     // style
     const style = document.createElement('style');
@@ -47,4 +50,12 @@ export default (carousel) => {
     
     try { document.head.appendChild(style); }
     catch { document.querySelector('body').appendChild(style); }
+
+    // add events
+    const updateCarousel = () => {
+        // 
+    };
+
+    arrowLeft.addEventListener('click', updateCarousel);
+    arrowRight.addEventListener('click', updateCarousel);
 };
