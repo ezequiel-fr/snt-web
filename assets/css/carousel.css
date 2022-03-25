@@ -1,42 +1,77 @@
-/* .carousel.carouselController {
-    width: 100%; height: 100%; background: #f00; display: flex; flex-direction: row;
+main { height: 32em; }
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 720px;
+    height: 480px;
+    margin: 5px;
+    border: 1px solid #222;
+    border-radius: 5px;
 }
 
-.carousel.carouselController .carouselController.arrow {
-    margin: 5px 0; width: 36px; height: 14px; transform: rotate(90deg); cursor: pointer; flex: 1;
+.carousel, .container { overflow: hidden; }
+
+.arrow-box {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
-.carousel.carouselController .carouselController.arrow.left {transform: rotate(270deg)}
-
-.carousel.carouselController .carouselController.arrow span,
-.carousel.carouselController .carouselController.arrow span::before {
-    content: ''; display: block; position: relative; top: 6px; left: 0; width: 20px; height: 2px; background: #666; border-radius: 1px; transform: rotate(-30deg);}
-
-.carousel.carouselController .carouselController.arrow span::before {
-    height: 2.75px; top: 7.9px; left: 13.5px; transform: rotate(59deg); background: #666;
-}
-.carousel.carouselController .carousel-body {flex: 2;} */
 
 .arrow {
     display: block;
-    background: #f00;
     cursor: pointer;
-    width: 30px;
-    height: 18px;
+    width: 20px;
+    height: 34px;
+    transition: all 250ms;
 }
 
+.arrow.left {transform: rotate(.5turn)}
+
+.arrow:hover {transform: scale(120%)}
+.arrow.left:hover {transform: rotate(.5turn) scale(120%)}
+
 .arrow span, .arrow span::after {
+    position: relative;
+    top: 8px;
     display: block;
     width: 20px;
     height: 2px;
     background: #333;
     border-radius: 2px;
+    transform: rotate(60deg);
+    cursor: pointer;
 }
 
 .arrow span::after {
     content: '';
-    transform: rotate(60deg);
-    position: relative;
-    top: 8px;
     left: calc(50% + 4px);
+}
+
+.container, .container .content {
+    flex: 100%;
+    background: #0f0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .content {
+    background: #00f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container .index {
+    position: relative;
+    bottom: 22px;
+    height: 12px;
+    width: 100%;
+    background-color: #f00;
+    z-index: 2;
 }
