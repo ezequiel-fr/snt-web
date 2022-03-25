@@ -26,14 +26,14 @@ main { height: 32em; }
     cursor: pointer;
     width: 20px;
     height: 34px;
-    transition: all 250ms;
+    transition: all .2s;
     z-index: 3;
 }
 
 .arrow.left {transform: rotate(.5turn)}
 
-.arrow:hover {transform: scale(120%)}
-.arrow.left:hover {transform: rotate(.5turn) scale(120%)}
+.arrow:hover {transform: scale(125%)}
+.arrow.left:hover {transform: rotate(.5turn) scale(125%)}
 
 .arrow span, .arrow span::after {
     position: relative;

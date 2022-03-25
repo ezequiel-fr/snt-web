@@ -111,6 +111,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 header > div {
@@ -125,7 +126,7 @@ header > div {
 }
 
 header .first-part {
-    z-index: 3;
+    z-index: 13;
 }
 
 header .title {
@@ -235,7 +236,7 @@ header .second-part {
     opacity: 0;
     top: -50px;
     height: 50px;
-    z-index: 0;
+    z-index: 10;
     background: var(--black-2);
     transition: all .5s ease-in-out;
 }
