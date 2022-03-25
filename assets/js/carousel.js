@@ -3,6 +3,8 @@
  */
 
 export default (carousel) => {
+    if (undefined === carousel || null === carousel) return;
+
     // load articles
     const articles = carousel.querySelectorAll('article');
     

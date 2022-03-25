@@ -230,10 +230,10 @@ header .icon-menu.active span::before {
     top: 0px;
 }
 
-header .second-part {
+header .menu {
     display: block;
     position: relative;
-    opacity: 0;
+    opacity: 50%;
     top: -50px;
     height: 50px;
     z-index: 10;
@@ -241,20 +241,21 @@ header .second-part {
     transition: all .5s ease-in-out;
 }
 
-header .second-part.active {
+header .menu.active {
     opacity: 1;
     top: 0;
 }
 
-header .second-part ul {
+header .menu ol {
     display: flex;
     flex-direction: row;
     height: 100%;
     width: 100%;
     padding: 0 10px;
+    list-style: none;
 }
 
-header .second-part ul > ol {
+header .menu ol > li {
     margin: 12px;
     font-family: 'SourceSansPro-Regular';
     font-size: 1.1rem;
@@ -262,13 +263,13 @@ header .second-part ul > ol {
     user-select: none;
 }
 
-header .second-part ul > ol a {
+header .menu ol > li a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
 }
 
-header .second-part ul > ol a::after {
+header .menu ol > li a::after {
     content: '';
     display: block;
     width: 0;
@@ -277,7 +278,7 @@ header .second-part ul > ol a::after {
     background: #2ad;
 }
 
-header .second-part ul > ol:hover a::after {
+header .menu ol > li:hover a::after {
     width: 100%;
 }
 /* header end */
@@ -549,6 +550,7 @@ footer .copyright {
 footer .copyright > a {
     color: #fffc;
     text-decoration: none;
+    cursor: pointer;
 }
 
 footer .copyright > a::after {
@@ -557,7 +559,7 @@ footer .copyright > a::after {
     width: 0;
     height: 1px;
     background: #fff0;
-    transition: all 750ms ease;
+    transition: all .6s ease;
 }
 
 footer .copyright a:hover::after {
@@ -567,9 +569,10 @@ footer .copyright a:hover::after {
 /* footer end */
 
 /* media-screen */
-@media (max-width: 200px) {
-    body {
-        background: var(--black);
+@media only screen and (hover: none) and (pointer: coarse) {
+    main {
+        width: 100%;
+        background: #f00;
     }
 }
 /* media-screen end */

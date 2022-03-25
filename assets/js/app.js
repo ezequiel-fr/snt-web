@@ -8,7 +8,7 @@ window.onload = () => {
     menuIcon.addEventListener('click', () => {
         menuIcon.classList.toggle('active');
         
-        document.querySelector('header .second-part').classList[
+        document.querySelector('header .menu').classList[
             menuIcon.classList.contains('active') ? 'add' : 'remove'
         ]('active');
     });
