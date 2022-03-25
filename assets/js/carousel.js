@@ -5,6 +5,12 @@
 export default (carousel) => {
     // load articles
     const articles = carousel.querySelectorAll('article');
+    
+    // init vars
+    const maxLen = articles.length;
+    var current = 0;
+
+    // init carousel
     carousel.innerHTML = "";
     carousel.classList.add('carouselController', 'carousel-main');
 
@@ -25,24 +31,19 @@ export default (carousel) => {
     var arrowLeft = arrow('left');
     var arrowRight = arrow('right');
 
-    carousel.appendChild(arrowLeft);
-
     // container
     const container = document.createElement('div');
           container.classList.add('container', 'carouselController', 'carousel-body');
     
     const content = document.createElement('div'); // content
-          content.classList.add('container', 'carouselController', 'carousel-body');
+          content.classList.add('content', 'carouselController', 'carousel-body');
     
     const index = document.createElement('div'); // index
           index.classList.add('index', 'carouselController');    
     
-    container.appendChild(content);
-    container.appendChild(index);
-    carousel.appendChild(container);
-
-    // last arrow
-    carousel.appendChild(arrowRight);
+    // append childs  
+    container.append(content, index);
+    carousel.append(arrowLeft, container, arrowRight);
 
     // style
     const style = document.createElement('style');
@@ -51,11 +52,31 @@ export default (carousel) => {
     try { document.head.appendChild(style); }
     catch { document.querySelector('body').appendChild(style); }
 
-    // add events
-    const updateCarousel = () => {
-        // 
+    // functions
+    const updateValue = (e) => {
+        var i = e.path[0].classList.contains('right')
+            ? 1 : (e.path[0].classList.contains('left')
+            ? -1 : (e.path[1].classList.contains('right')
+            ? 1 : (e.path[1].classList.contains('left')
+            ? -1 : 0)));
+
+        current += i;
+        current = current < 0 ? maxLen - 1 : current >= maxLen ? 0 : current;
+
+        updateCarousel();
     };
 
-    arrowLeft.addEventListener('click', updateCarousel);
-    arrowRight.addEventListener('click', updateCarousel);
+    const updateCarousel = () => content.scrollLeft = content.clientWidth * current;
+
+    // experimental
+    articles.forEach(e => content.appendChild(e));
+    style.innerHTML += `.carousel.carouselController .container.carouselController .content.carouselController {flex-wrap: wrap; overflow-x: hidden;}`;
+    style.innerHTML += `.carousel.carouselController .container.carouselController .content.carouselController article {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%;}`;
+
+    // run
+    updateCarousel();
+
+    // event listeners
+    arrowLeft.addEventListener('click', updateValue);
+    arrowRight.addEventListener('click', updateValue);
 };
