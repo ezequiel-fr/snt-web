@@ -23,7 +23,7 @@ window.onload = () => {
             document.height = document.documentElement.clientHeight;
     
             const refreshSizes = () => {
-                var bottom = document.height - document.main.clientHeight - 100;
+                var bottom = document.height - document.main.clientHeight - 100 - document.footer.clientHeight;
                 document.footer.style.bottom = `${((bottom <= 0) ? bottom : 0)}px`;
     
                 var mainMinHeight = document.height - document.header.clientHeight - document.footer.clientHeight;

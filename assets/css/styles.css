@@ -340,6 +340,7 @@ footer .container > div .content a,
 footer .container > div .content li,
 footer .container > div .content img {
     user-select: none;
+    cursor: pointer;
 } 
 
 /* about-us */
