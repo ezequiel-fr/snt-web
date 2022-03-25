@@ -570,9 +570,14 @@ footer .copyright a:hover::after {
 
 /* media-screen */
 @media only screen and (hover: none) and (pointer: coarse) {
-    main {
-        width: 100%;
-        background: #f00;
-    }
+    main { width: 100vw }
+}
+
+@media only screen and (max-device-width: 640px) {
+    main { width: 100vw }
+}
+    
+@media only screen and (max-device-width: 768px) {
+    main { width: 100vw }
 }
 /* media-screen end */
