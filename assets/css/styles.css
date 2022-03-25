@@ -571,13 +571,16 @@ footer .copyright a:hover::after {
 /* media-screen */
 @media only screen and (hover: none) and (pointer: coarse) {
     main { width: 100vw }
+    header .first-part:hover h1::after { width: 100% }
 }
 
 @media only screen and (max-device-width: 640px) {
     main { width: 100vw }
+    header .first-part:hover h1::after { width: 100% }
 }
     
 @media only screen and (max-device-width: 768px) {
     main { width: 100vw }
+    header .first-part:hover h1::after { width: 100% }
 }
 /* media-screen end */
