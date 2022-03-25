@@ -9,9 +9,9 @@ main { height: 32em; }
     margin: 5px;
     border: 1px solid #222;
     border-radius: 5px;
+    overflow: hidden;
 }
 
-.carousel, .container { overflow: hidden; }
 
 .arrow-box {
     flex: 1;
@@ -27,6 +27,7 @@ main { height: 32em; }
     width: 20px;
     height: 34px;
     transition: all 250ms;
+    z-index: 3;
 }
 
 .arrow.left {transform: rotate(.5turn)}
@@ -53,25 +54,39 @@ main { height: 32em; }
 
 .container, .container .content {
     flex: 100%;
-    background: #0f0;
     width: 100%;
     height: 100%;
 }
 
 .container .content {
-    background: #00f;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    width: calc(100% + 40px);
+   right: 20px;
 }
 
 .container .index {
+    display: inline-flex;
     position: relative;
-    bottom: 22px;
-    height: 12px;
+    bottom: 24px;
+    height: 14px;
     width: 100%;
-    background-color: #f00;
+    justify-content: center;
     z-index: 2;
 }
+
+.container .index span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    margin: 0 2px;
+}
+
+.container .index span.filled {background: var(--primary-color)}
