@@ -1,4 +1,4 @@
-import devtools from './devtools.js';
+import devtools from './disable-devtools.js';
 import Carousel from './carousel.js';
 
 window.mobileAndTabletCheck = () => {
