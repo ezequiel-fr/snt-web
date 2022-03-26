@@ -526,13 +526,11 @@ footer .container .contact .infos li span:nth-child(2) a::after {
     content: '';
     display: block;
     width: 30px;
-    height: 1px;
+    height: .5px;
     background: var(--white);
     transition: all .5s ease;
     
 }
-
-footer .container .contact .infos li:nth-child(2) span a::after { height: .5px }
 
 footer .container .contact .infos li span:hover ~ span a::after,
 footer .container .contact .infos li span:hover a::after {
