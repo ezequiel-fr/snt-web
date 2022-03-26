@@ -132,12 +132,10 @@ header .first-part {
 header .title {
     color: var(--primary-color);
     margin: 20px;
-    cursor: pointer;
 }
 
 header .title h1 {
     font-family: 'Poppins-Regular';
-    cursor: pointer;
     font-weight: 500;
     font-size: 2.5rem;
     font-style: oblique;
@@ -147,6 +145,7 @@ header .title h1 {
 header .title h1::after {
     content: '';
     display: block;
+    cursor: pointer;
     position: relative;
     top: -5px;
     left: 2.5px;
@@ -164,6 +163,7 @@ header .title:hover h1::after {
 header .title h1 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 header .title h1 span {
@@ -171,6 +171,7 @@ header .title h1 span {
     font-family: 'Poppins-Bold', 'SourceSansPro-Bold', sans-serif;
     font-synthesis: style;
     font-style: normal;
+    cursor: pointer;
 }
 
 header .icon-menu {

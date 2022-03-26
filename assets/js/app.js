@@ -30,7 +30,7 @@ window.onload = () => {
                 document.main.style.minHeight = `${Math.abs(mainMinHeight)}px`;
             };
     
-            setInterval(refreshSizes, 500);
+            setInterval(refreshSizes, 100);
         }
     } catch {};
 };
