@@ -569,6 +569,16 @@ footer .copyright a:hover::after {
 /* footer end */
 
 /* media-screen */
+@media (max-width: 445px) {
+    footer .container > div .content {
+        margin-bottom: 2em;
+    }
+
+    footer .container .about-us {
+        width: calc(100% - 4em);
+    }
+}
+
 @media only screen and (hover: none) and (pointer: coarse) {
     main { width: 100vw }
     header .first-part:hover h1::after { width: 100% }
