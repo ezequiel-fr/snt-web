@@ -28,7 +28,7 @@
             text-align: center;
         }
 
-        .container::after {
+        .container::before {
             content: '401';
             display: block;
             width: auto;
@@ -84,14 +84,26 @@
         <span>Unauthorized</span>
 
         <div class="go-back">
-            <a href="/">Go to welcome page</a>
+            <a href="/">Go to home page</a>
         </div>
     </div>
 
     <script type="text/javascript">
-        if (location.href.includes('snt-web')) {
-            document.querySelector('.go-back a').href = '../';
-        }
+        (function () {
+            window.urlSplitted = location.href.split('/');
+
+            if (urlSplitted[urlSplitted.length - 1] == '') urlSplitted.pop();
+            if (urlSplitted[urlSplitted.length - 1] == 'index.html') urlSplitted.pop();
+
+            window.history.pushState (
+                {foo: 'foo'}, 'URL',
+                urlSplitted.join('/')
+            );
+        })(
+            location.href.includes('snt-web')
+                ? document.querySelector('.go-back a').href = '../'
+                : void 0
+        );
     </script>
 
 </body>
