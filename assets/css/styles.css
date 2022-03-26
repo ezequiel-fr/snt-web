@@ -496,7 +496,6 @@ footer .container .quick-links .content ul li:hover a {
 
 /* contact */
 footer .container .contact {
-    display: block;
     width: fit-content;
 }
 
@@ -537,12 +536,12 @@ footer .container .contact .infos li:hover span:nth-child(2) a::after {
 }
 
 footer .copyright {
-    color: var(--white-1);
-    font-family: 'Poppins-Regular';
-    margin: 10px 0;
     display: flex;
     justify-content: center;
     text-align: center;
+    color: var(--white-1);
+    font-family: 'Poppins-Regular';
+    margin: 10px 0;
     width: 100%;
     user-select: none;
 }
@@ -569,6 +568,12 @@ footer .copyright a:hover::after {
 /* footer end */
 
 /* media-screen */
+@media (max-width: 500px) {
+    footer .copyright {
+        display: block;
+    }
+}
+
 @media (max-width: 445px) {
     footer .container > div .content {
         margin-bottom: 2em;
