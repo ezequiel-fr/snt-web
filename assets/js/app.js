@@ -27,7 +27,7 @@ window.onload = () => {
     
     const refreshStyles = () => {
         // scrollbar
-        if (document.documentElement.scrollHeight >= document.documentElement.clientHeight && !mobileAndTabletCheck())
+        if (document.documentElement.scrollHeight > document.documentElement.clientHeight && !mobileAndTabletCheck())
             document.querySelector('main').style.width = 'calc(100vw - 12px)';
         
         // footer
