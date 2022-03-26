@@ -40,9 +40,7 @@
             color: #25d2;
         }
 
-        .container span, .container div {
-            z-index: 1;
-        }
+        .container span, .container div { z-index: 1 }
 
         .container span {
             font-family: 'SourceSansPro-Bold', sans-serif;
@@ -91,7 +89,9 @@
     </div>
 
     <script type="text/javascript">
-        // 
+        if (location.href.includes('snt-web')) {
+            document.querySelector('.go-back a').href = '../';
+        }
     </script>
 
 </body>
