@@ -104,13 +104,18 @@ body {
     align-items: initial;
 }
 
-/* header */
-header {
+header, footer {
     background: var(--secondary-color);
-    height: 100px;
-    width: 100%;
+    box-shadow: 0 0 20px var(--grey-2),
+                0 0 10px var(--black-1);
     display: flex;
     flex-flow: column nowrap;
+    width: 100%;
+}
+
+/* header */
+header {
+    height: 100px;
     align-items: center;
     position: sticky;
     top: 0;
@@ -296,11 +301,7 @@ main {
 
 /* footer */
 footer {
-    display: flex;
-    flex-flow: column nowrap;
     justify-content: flex-end;
-    background: var(--secondary-color);
-    width: 100%;
     min-height: 150px;
 }
 
@@ -321,8 +322,9 @@ footer .container > div {
 }
 
 footer .container > div h2 {
-    color: var(--white-1);
+    color: var(--white-2);
     width: fit-content;
+    text-shadow: 0 0 20px #eee3;
 }
 
 footer .container > div h2::after {
