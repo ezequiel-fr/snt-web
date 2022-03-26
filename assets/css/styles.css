@@ -193,12 +193,13 @@ header .icon-menu::after {
     position: absolute;
     width: 0;
     height: 0;
+    background: transparent;
     border-radius: 80px;
-    background: #25d2;
-    transition: all 250ms ease-out;
+    transition: all 280ms ease-out;
 }
 
 header .icon-menu:hover::after {
+    background: #25d2;
     width: 80px;
     height: 80px;
 }

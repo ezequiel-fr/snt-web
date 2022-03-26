@@ -1,3 +1,4 @@
+import devtools from './devtools.js';
 import Carousel from './carousel.js';
 
 window.mobileAndTabletCheck = () => {
