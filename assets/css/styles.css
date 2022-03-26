@@ -98,14 +98,18 @@ h1, h2, h3, h4, h5, p, a, span {
 }
 /* basic rules end */
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
 /* header */
 header {
     background: var(--secondary-color);
     height: 100px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     flex-flow: column nowrap;
     align-items: center;
     position: sticky;
@@ -116,8 +120,6 @@ header {
 
 header > div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
@@ -287,27 +289,22 @@ header .menu ol > li:hover a::after {
 /* main */
 main {
     background: var(--background-theme);
-    width: calc(100vw - 12px);
+    width: 100vw;
 }
 /* end main */
 
 /* footer */
 footer {
-    position: absolute;
-    bottom: 0;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     flex-flow: column nowrap;
+    justify-content: flex-end;
     background: var(--secondary-color);
     width: 100%;
-    min-height: 100px;
+    min-height: 150px;
 }
 
 footer .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 10px 0;
@@ -318,8 +315,6 @@ footer .container > div {
     min-height: 100px;
     padding: 0 5px 0 4px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     flex-flow: column nowrap;
     align-items: center;
 }
@@ -346,7 +341,7 @@ footer .container > div .content img {
 } 
 
 /* about-us */
-footer .container .about-us { width: calc(40% - 10px); }
+footer .container .about-us { width: calc(46% - 10px); }
 
 footer .container .about-us .content p {
     font-family: 'Poppins-Light';
@@ -508,6 +503,8 @@ footer .container .contact .infos {
 footer .container .contact .infos li {
     display: flex;
     flex-direction: row;
+    width: fit-content;
+    max-height: 30px;
 }
 
 footer .container .contact .infos li span:nth-child(1) img {
@@ -521,6 +518,7 @@ footer .container .contact .infos li span:nth-child(2) a {
     text-decoration: none;
     color: var(--white-1);
     font-family: 'Poppins-Regular';
+    font-size: .9rem;
 }
 
 footer .container .contact .infos li span:nth-child(2) a::after {
@@ -530,9 +528,13 @@ footer .container .contact .infos li span:nth-child(2) a::after {
     height: 1px;
     background: var(--white);
     transition: all .5s ease;
+    
 }
 
-footer .container .contact .infos li:hover span:nth-child(2) a::after {
+footer .container .contact .infos li:nth-child(2) span a::after { height: .5px }
+
+footer .container .contact .infos li span:hover ~ span a::after,
+footer .container .contact .infos li span:hover a::after {
     width: 100%;
 }
 
