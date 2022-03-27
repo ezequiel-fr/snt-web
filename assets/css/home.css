@@ -14,7 +14,7 @@ main > hr {
 }
 
 main section:nth-last-child(1) {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 main section.title {
@@ -60,7 +60,16 @@ main section.title h3 {
 }
 
 main section.table-of-content {
-    background: #f00;
+    background: var(--white);
     height: 2em;
     width: 80%;
+}
+
+main section.test {
+    background: #0ff4;
+    overflow: hidden;
+}
+
+main section.test .carousel {
+    width: 720px;
 }
