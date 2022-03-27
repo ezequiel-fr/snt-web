@@ -3,6 +3,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 main > hr {
@@ -68,11 +69,74 @@ main section.title h3 {
     font-family: 'Poppins-Light';
 }
 
+/* table of contents */
 main section.table-of-content {
     background: var(--white);
     height: 2em;
     width: 80%;
 }
+/* end table of contents */
+
+/* story */
+main section.story {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+main section.story .title {
+    width: 100%;
+    justify-content: center;
+}
+
+main section.story .title h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+main section.story .content {
+    width: calc(100% - 2em);
+    display: inline-block;
+    clear: left;
+    padding: 1em;
+}
+
+main section.story .content picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    border-radius: 10px;
+    float: left;
+}
+
+main section.story .content picture img {
+    height: calc(100% - 2em);
+    /* width: 0.66780797101 */
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+main section.story .content p {
+    font-family: 'SourceSansPro-Regular';
+    margin-bottom: .8em;
+}
+
+main section.story .content p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: all .4s ease;
+}
+
+main section.story .content p a:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+/* end story */
 
 main section.test {
     background: var(--white);
@@ -81,4 +145,10 @@ main section.test {
 
 main section.test .carousel {
     width: 720px;
+}
+
+@media (max-width: 740px) {
+    main section.test .carousel {
+        width: calc(100vw - 20px);
+    }
 }
