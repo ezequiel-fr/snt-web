@@ -91,7 +91,7 @@
 
     <script type="text/javascript">
         (function () {
-            window.urlSplitted = location.href.split('/');
+            const urlSplitted = location.href.split('/');
 
             if (urlSplitted[urlSplitted.length - 1] == '') urlSplitted.pop();
             if (urlSplitted[urlSplitted.length - 1] == 'index.html') urlSplitted.pop();
@@ -100,6 +100,8 @@
                 {foo: 'foo'}, 'URL',
                 urlSplitted.join('/')
             );
+
+            return document.querySelectorAll('script', el => el.remove());
         })(
             location.href.includes('snt-web')
                 ? document.querySelector('.go-back a').href = './'
