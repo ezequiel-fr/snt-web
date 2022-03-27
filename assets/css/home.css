@@ -17,6 +17,8 @@ main section:nth-last-child(1) {
     margin-bottom: 2em;
 }
 
+main section:not(.title) { margin-top: 2em }
+
 main section.title {
     display: flex;
     color: var(--primary-color);
@@ -25,7 +27,6 @@ main section.title {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 4em;
 }
 
 main section.title h1 {
@@ -34,6 +35,14 @@ main section.title h1 {
     font-size: 4rem;
     font-synthesis: style;
     color: inherit;
+    transition: all .5s;
+    cursor: crosshair;
+    text-shadow: 15px -10px #00000004,
+    7.5px -5px #1a5adc1a;
+}
+
+main section.title h1:hover {
+    text-shadow: 7.5px -7.5px #25d2;
 }
 
 main section.title h1::first-letter {
@@ -66,7 +75,7 @@ main section.table-of-content {
 }
 
 main section.test {
-    background: #0ff4;
+    background: var(--white);
     overflow: hidden;
 }
 
