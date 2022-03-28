@@ -112,7 +112,7 @@ main section.story .content picture {
 }
 
 main section.story .content picture img {
-    height: calc(100% - 2em);
+    height: calc(50vw - 2em);
     /* width: 0.66780797101 */
     max-height: 350px;
     object-fit: contain;

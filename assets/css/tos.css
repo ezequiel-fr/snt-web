@@ -194,11 +194,6 @@ a { cursor: pointer }
         width: 0;
     }
 
-    40% {
-        background: var(--primary-color);
-    }
-
-    to {
-        width: 100%;
-    }
+    40% { background: var(--primary-color); }
+    to { width: 100%; }
 }
