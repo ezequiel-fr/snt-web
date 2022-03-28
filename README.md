@@ -22,7 +22,7 @@ Languages informatiques :
 - CSS (Cascade StyleSheet)
 - JS (JavaScript)
 - SVG (Scalable Vector Graphics)
-- md (MarkDown)
+- MD (MarkDown)
 - *.gitignore*
 
 Langues :
