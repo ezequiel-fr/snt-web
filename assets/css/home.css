@@ -115,6 +115,7 @@ main section.story .content picture img {
     height: calc(50vw - 2em);
     /* width: 0.66780797101 */
     max-height: 350px;
+    min-height: 50px;
     object-fit: contain;
     border-radius: 10px;
 }

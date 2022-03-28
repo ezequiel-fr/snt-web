@@ -12,7 +12,8 @@ window.mobileAndTabletCheck = () => {
 };
 
 window.onload = () => {
-    Carousel(document.querySelector('section .carousel'));
+    // carousels
+    document.querySelectorAll('section .carousel').forEach(e => Carousel(e));
 
     // menu
     const menuIcon = document.querySelector('header .icon-menu');
