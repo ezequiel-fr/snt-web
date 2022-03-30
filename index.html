@@ -31,11 +31,33 @@
     <div id="root"></div>
 
     <script type="text/javascript">
-        document.querySelectorAll('a[href="#footer"]').forEach(e => {
-            e.addEventListener('click', function () {
-                document.documentElement.scrollTop = document.header.clientHeight + document.main.clientHeight
+        // url
+        (function (urlSplitted) {
+            if (urlSplitted[urlSplitted.length - 1] == '') urlSplitted.pop();
+            if (urlSplitted[urlSplitted.length - 1] == 'index.html') urlSplitted.pop();
+            
+            window.history.pushState (
+                {foo: 'foo'}, 'URL',
+                urlSplitted.join('/')
+                );
+        }) (location.href.split('/')),
+
+        // table of content - tof (summary)
+        (window.addEventListener('load', () => setTimeout(function () {
+            const tofLinks = document.querySelectorAll('main section.table-of-content ol li a');
+            
+            tofLinks.forEach(e => {
+                if (e.href.includes(`${location.pathname}#`)) {
+                    var url = e.href.split('/')[e.href.split('/').length - 1],
+                        el = document.querySelector(`main section.table-of-content .suggest div[data-href="${url}"]`)
+  
+                    if (undefined != url && el) {
+                        e.addEventListener('mouseover', () => el.classList.add('active'));
+                        e.addEventListener('mouseout', () => el.classList.remove('active'));
+                    }
+                }
             });
-        });
+        }, 200)));
 
         // document.documentElement.scrollTop += 20
     </script>

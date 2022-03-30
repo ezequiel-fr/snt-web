@@ -71,9 +71,123 @@ main section.title h3 {
 
 /* table of contents */
 main section.table-of-content {
-    background: var(--white);
-    height: 2em;
+    display: inline-flex;
+    flex-flow: row nowrap;
     width: 80%;
+}
+
+main section.table-of-content ol {
+    /* list-style: none; */
+    padding-left: 25px;
+    width: 80%;
+    margin: 8px 0;
+}
+
+main section.table-of-content ol li {
+    font-family: 'Poppins-Regular';
+    color: var(--black-3);
+    margin: 6px 0;
+    width: max-content;
+}
+
+main section.table-of-content ol .sub {
+    margin: 12px 0;
+}
+
+main section.table-of-content ol li a {
+    text-decoration: underline .5px transparent;
+    color: unset;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+main section.table-of-content ol li a:hover {
+    text-decoration: underline .5px var(--black);
+}
+
+main section.table-of-content ol.content {
+    margin-left: calc(10% + 20px);
+    padding-left: 0;
+    display: block;
+}
+
+main section.table-of-content .suggest {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+main section.table-of-content .suggest > div {
+    position: absolute;
+    left: 7.5px;
+    width: calc(100% - 7.5px);
+    max-width: 300px;
+    height: 50%;
+    box-shadow: 8px 8px 8px #ddda,
+                4px 4px 8px #bbba;
+    padding: 0;
+}
+
+main section.table-of-content .suggest > div,
+main section.table-of-content .suggest > div::before {
+    border-radius: 5px;
+    background: #fffa;
+    transition: all .2s ease;
+    opacity: 0;
+}
+
+main section.table-of-content .suggest > div.active,
+main section.table-of-content .suggest > div.active::before {
+    opacity: 1;
+}
+
+main section.table-of-content .suggest > div::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    top: 2.5px;
+    left: -7.5px;
+    transition-delay: 50ms;
+}
+
+main section.table-of-content .suggest div[data-href="#story"]::before {top: 12px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals"] {top: 10px}
+main section.table-of-content .suggest div[data-href="#fundamentals"]::before {top: 24px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals-html"] {top: 20px}
+main section.table-of-content .suggest div[data-href="#fundamentals-html"]::before {top: 40px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals-html-files"] {top: 32px}
+main section.table-of-content .suggest div[data-href="#fundamentals-html-files"]::before {top: 58px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals-html-code-format"] {top: 60px}
+main section.table-of-content .suggest div[data-href="#fundamentals-html-code-format"]::before {top: 54px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals-css"] {top: 80px}
+main section.table-of-content .suggest div[data-href="#fundamentals-css"]::before {top: 58px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals-css-files"] {top: 100px}
+main section.table-of-content .suggest div[data-href="#fundamentals-css-files"]::before {top: 66px}
+
+main section.table-of-content .suggest div[data-href="#fundamentals-css-code-format"] {top: 130px}
+main section.table-of-content .suggest div[data-href="#fundamentals-css-code-format"]::before {top: 60px}
+
+main section.table-of-content .suggest > div .card-content {
+    position: relative;
+    display: block;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+main section.table-of-content .suggest > div .card-content h3 {
+    color: #25b;
 }
 /* end table of contents */
 
@@ -113,7 +227,7 @@ main section.story .content picture {
 
 main section.story .content picture img {
     height: calc(50vw - 2em);
-    /* width: 0.66780797101 */
+    /* width => 0.66780797101 */
     max-height: 350px;
     min-height: 50px;
     object-fit: contain;
@@ -146,6 +260,13 @@ main section.test {
 
 main section.test .carousel {
     width: 720px;
+}
+
+@media (max-width: 700px) {
+    main section.table-of-content .suggest {
+        display: none;
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 740px) {

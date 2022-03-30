@@ -37,43 +37,95 @@ export default `
     <hr>
 
     <section class="table-of-content">
-        <ul class="content">
+        <ol class="content">
             <li class="first">
                 <a href="#story">L'histoire du web</a>
             </li>
 
             <li class="childs">
-                <a href="#fundamentals">Bases fondamentales</a>
+                <a href="#fundamentals" data-content="Bases fondamentales">Bases fondamentales</a>
 
-                <ul class="sub">
+                <ol class="sub">
                     <li class="childs">
-                        <a href="#fundamentals-html">Créer un fichier HTML</a>
+                        <a href="#fundamentals-html" data-content="Créer un fichier HTML">Créer un fichier HTML</a>
 
-                        <ul class="sub">
+                        <ol class="sub">
                             <li><a href="#fundamentals-html-files">Format HTML</a></li>
                             <li><a href="#fundamentals-html-code-format">Système de balises</a></li>
-                        </ul>
+                        </ol>
                     </li>
 
                     <li class="childs">
-                        <a href="#fundamentals-css">Créer un fichier CSS</a>
+                        <a href="#fundamentals-css" data-content="Créer un fichier CSS">Créer un fichier CSS</a>
 
-                        <ul class="sub">
+                        <ol class="sub">
                             <li><a href="#fundamentals-css-files">Format CSS</a></li>
                             <li><a href="#fundamentals-css-code-format">Système d'écriture</a></li>
-                        </ul>
+                        </ol>
                     </li>
-                </ul>
+                </ol>
             </li>
 
-            <li class="last childs">
-                <ul class="sub">
-                    <li><a href="#footer">A propos de nous</a></li>
-                    <li><a href="#footer">Liens rapides</a></li>
-                    <li><a href="#footer">Contactez-nous</a></li>
-                </ul>
-            </li>
-        </ul>
+            
+            <li><a href="#footer">A propos de nous</a></li>
+            <li><a href="#footer">Liens rapides</a></li>
+            <li><a href="#footer">Contactez-nous</a></li>
+        </ol>
+
+        <div class="suggest">
+            <div data-href="#story">
+                <div class="card-content">
+                    <h3>L'histoire du web</h3>
+
+                    <p>
+                        Découvrez dans cette section découvrez qui est le
+                        créateur du web et la création étonnante du web.
+                    </p>
+               </div> 
+            </div>
+
+            <div data-href="#fundamentals">
+                <div class="card-content">
+                    <h3>Bases fondamentales</h3>
+               </div> 
+            </div>
+
+            <div data-href="#fundamentals-html">
+                <div class="card-content">
+                    <h3>Créer un fichier HTML</h3>
+               </div> 
+            </div>
+
+            <div data-href="#fundamentals-html-files">
+                <div class="card-content">
+                    <h3>Format HTML</h3>
+               </div> 
+            </div>
+            
+            <div data-href="#fundamentals-html-code-format">
+                <div class="card-content">
+                    <h3>Système de balises</h3>
+               </div> 
+            </div>
+    
+            <div data-href="#fundamentals-css">
+                <div class="card-content">
+                    <h3>Créer un fichier CSS</h3>
+               </div> 
+            </div>
+
+            <div data-href="#fundamentals-css-files">
+                <div class="card-content">
+                    <h3>Format CSS</h3>
+               </div> 
+            </div>
+
+            <div data-href="#fundamentals-css-code-format">
+                <div class="card-content">
+                    <h3>Système d'écriture</h3>
+               </div> 
+            </div>
+        </div>
     </section>
 
     <hr id="story">
