@@ -34,120 +34,159 @@ export default `
         <h3>Ezequiel FRIDEL</h3>
     </section>
 
-    <hr>
+    <hr id="table-of-content">
 
     <section class="table-of-content">
-        <ol class="content">
-            <li class="first">
-                <a href="#story">L'histoire du web</a>
-            </li>
+        <div class="box-title">
+            <h2>Sommaire :</h2>
+        </div>
 
-            <li class="childs">
-                <a href="#fundamentals" data-content="Bases fondamentales">Bases fondamentales</a>
+        <div class="container">
+            <ol class="content">
+                <li class="first">
+                    <a href="#story">L'histoire du web</a>
+                </li>
 
-                <ol class="sub">
-                    <li class="childs">
-                        <a href="#fundamentals-html" data-content="Créer un fichier HTML">Créer un fichier HTML</a>
+                <li class="childs">
+                    <a href="#fundamentals" data-content="Bases fondamentales">Bases fondamentales</a>
 
-                        <ol class="sub">
-                            <li><a href="#fundamentals-html-files">Format HTML</a></li>
-                            <li><a href="#fundamentals-html-code-format">Système de balises</a></li>
-                        </ol>
-                    </li>
+                    <ol class="sub">
+                        <li class="childs">
+                            <a href="#fundamentals-html" data-content="Créer un fichier HTML">Créer un fichier HTML</a>
 
-                    <li class="childs">
-                        <a href="#fundamentals-css" data-content="Créer un fichier CSS">Créer un fichier CSS</a>
+                            <ol class="sub">
+                                <li><a href="#fundamentals-html-files">Format HTML</a></li>
+                                <li><a href="#fundamentals-html-code-format">Système de balises</a></li>
+                            </ol>
+                        </li>
 
-                        <ol class="sub">
-                            <li><a href="#fundamentals-css-files">Format CSS</a></li>
-                            <li><a href="#fundamentals-css-code-format">Système d'écriture</a></li>
-                        </ol>
-                    </li>
-                </ol>
-            </li>
+                        <li class="childs">
+                            <a href="#fundamentals-css" data-content="Créer un fichier CSS">Créer un fichier CSS</a>
 
-            
-            <li><a href="#footer">A propos de nous</a></li>
-            <li><a href="#footer">Liens rapides</a></li>
-            <li><a href="#footer">Contactez-nous</a></li>
-        </ol>
+                            <ol class="sub">
+                                <li><a href="#fundamentals-css-files">Format CSS</a></li>
+                                <li><a href="#fundamentals-css-code-format">Système d'écriture</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
 
-        <div class="suggest">
-            <div data-href="#story" style="--t-b: 10px;">
-                <div class="card-content">
-                    <h3>
-                        L'histoire du web
-                        <span></span>
-                    </h3>
+                
+                <li><a href="#footer">A propos de nous</a></li>
+                <li><a href="#footer">Liens rapides</a></li>
+                <li><a href="#footer">Contactez-nous</a></li>
+            </ol>
 
-                    <p>
-                        Découvrez dans cette section découvrez qui est le
-                        créateur du web et la création étonnante du web.
-                    </p>
-               </div> 
-            </div>
+            <div class="suggest">
+                <div data-href="#story" style="--t-b: 10px;">
+                    <div class="card-content">
+                        <h3>
+                            L'histoire du web
+                            <span></span>
+                        </h3>
 
-            <div data-href="#fundamentals" style="--t: 10px; --t-b: 24px">
-                <div class="card-content">
-                    <h3>
-                        Bases fondamentales
-                        <span></span>
-                    </h3>
-               </div> 
-            </div>
+                        <p>
+                            Découvrez dans cette section qui est le
+                            créateur du web et la création étonnante du web.
+                        </p>
+                    </div> 
+                </div>
 
-            <div data-href="#fundamentals-html" style="--t: 20px; --t-b: 40px;">
-                <div class="card-content">
-                    <h3>
-                        Créer un fichier HTML
-                        <span></span>
-                    </h3>
-               </div> 
-            </div>
+                <div data-href="#fundamentals" style="--t: 10px; --t-b: 24px">
+                    <div class="card-content">
+                        <h3>
+                            Bases fondamentales
+                            <span></span>
+                        </h3>
 
-            <div data-href="#fundamentals-html-files" style="--t: 32px; --t-b: 58px;">
-                <div class="card-content">
-                    <h3>
-                        Format HTML
-                        <span></span>
-                    </h3>
-               </div> 
-            </div>
-            
-            <div data-href="#fundamentals-html-code-format" style="--t: 60px; --t-b: 54px;">
-                <div class="card-content">
-                    <h3>
-                        Système de balises
-                        <span></span>
-                    </h3>
-               </div> 
-            </div>
-    
-            <div data-href="#fundamentals-css" style="--t: 80px; --t-b: 58px;">
-                <div class="card-content">
-                    <h3>
-                        Créer un fichier CSS
-                        <span></span>
-                    </h3>
-               </div> 
-            </div>
+                        <p>
+                            Quelques bases fondamentales à avoir lors de
+                            ses premiers pas dans le développement web.
+                        </p>
+                    </div> 
+                </div>
 
-            <div data-href="#fundamentals-css-files" style="--t: 100px; --t-b: 66px;">
-                <div class="card-content">
-                    <h3>
-                        Format CSS
-                        <span></span>
-                    </h3>
-               </div> 
-            </div>
+                <div data-href="#fundamentals-html" style="--t: 20px; --t-b: 40px;">
+                    <div class="card-content">
+                        <h3>
+                            Créer un fichier HTML
+                            <span></span>
+                        </h3>
 
-            <div data-href="#fundamentals-css-code-format" style="--t: 130px; --t-b: 60px;">
-                <div class="card-content">
-                    <h3>
-                        Système d'écriture
-                        <span></span>
-                    </h3>
-               </div> 
+                        <p>
+                            Créer et éditer son premier fichier HTML avec
+                            une syntaxe de base correcte.
+                        </p>
+                    </div> 
+                </div>
+
+                <div data-href="#fundamentals-html-files" style="--t: 32px; --t-b: 58px;">
+                    <div class="card-content">
+                        <h3>
+                            Format HTML
+                            <span></span>
+                        </h3>
+
+                        <p>
+                            Comment créer son fichier HTML ? Où ?
+                            Quel système ?
+                        </p>
+                    </div> 
+                </div>
+                
+                <div data-href="#fundamentals-html-code-format" style="--t: 60px; --t-b: 54px;">
+                    <div class="card-content">
+                        <h3>
+                            Système de balises
+                            <span></span>
+                        </h3>
+
+                        <p>
+                            Le langage HTML est un composé d'un système de balisage
+                            qui diffère des autres langages de programmation...
+                        </p>
+                    </div> 
+                </div>
+        
+                <div data-href="#fundamentals-css" style="--t: 80px; --t-b: 58px;">
+                    <div class="card-content">
+                        <h3>
+                            Créer un fichier CSS
+                            <span></span>
+                        </h3>
+
+                        <p>
+                            Qu'est-ce qu'un fichier CSS ? A quoi sert-il ?
+                        </p>
+                    </div>
+                </div>
+
+                <div data-href="#fundamentals-css-files" style="--t: 100px; --t-b: 66px;">
+                    <div class="card-content">
+                        <h3>
+                            Format CSS
+                            <span></span>
+                        </h3>
+
+                        <p>
+                            Créer et éditer une feuille de style CSS.
+                        </p>
+                    </div> 
+                </div>
+
+                <div data-href="#fundamentals-css-code-format" style="--t: 130px; --t-b: 60px;">
+                    <div class="card-content">
+                        <h3>
+                            Système d'écriture
+                            <span></span>
+                        </h3>
+
+                        <p>
+                            L'écriture du CSS est également différente des
+                            autres langages, en voici quelques notions rapides.
+                        </p>
+                    </div> 
+                </div>
             </div>
         </div>
     </section>

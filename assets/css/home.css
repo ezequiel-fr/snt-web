@@ -71,53 +71,70 @@ main section.title h3 {
 
 /* table of contents */
 main section.table-of-content {
-    display: inline-flex;
-    flex-flow: row nowrap;
-    width: 80%;
+    width: calc(100% / 3 * 2);
 }
 
-main section.table-of-content ol {
-    /* list-style: none; */
+main section.table-of-content .box-title {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+main section.table-of-content .box-title h2 {
+    color: var(--black);
+    font-size: 1.8rem;
+    font-family: 'SourceSansPro-SemiBold';
+}
+
+main section.table-of-content .container {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    width: 100%;
+}
+
+main section.table-of-content .container ol {
     padding-left: 25px;
     width: 80%;
     margin: 8px 0;
 }
 
-main section.table-of-content ol li {
+main section.table-of-content .container ol li {
     font-family: 'Poppins-Regular';
     color: var(--black-3);
     margin: 6px 0;
     width: max-content;
 }
 
-main section.table-of-content ol .sub {
+main section.table-of-content .container ol .sub {
     margin: 12px 0;
 }
 
-main section.table-of-content ol li a {
+main section.table-of-content .container ol li a {
     text-decoration: underline .5px transparent;
     color: unset;
     cursor: pointer;
     transition: all ease .2s;
 }
 
-main section.table-of-content ol li a:hover {
+main section.table-of-content .container ol li a:hover {
     text-decoration: underline .5px var(--black);
 }
 
-main section.table-of-content ol.content {
-    margin-left: calc(10% + 20px);
+main section.table-of-content .container ol.content {
+    margin: 0 10px 0 10%;
     padding-left: 0;
     display: block;
+    width: min-content;
 }
 
-main section.table-of-content .suggest {
+main section.table-of-content .container .suggest {
     position: relative;
     display: block;
     width: 100%;
 }
 
-main section.table-of-content .suggest > div {
+main section.table-of-content .container .suggest > div {
     position: absolute;
     left: 7.5px;
     width: calc(100% - 7.5px);
@@ -128,20 +145,20 @@ main section.table-of-content .suggest > div {
     padding: 0;
 }
 
-main section.table-of-content .suggest > div,
-main section.table-of-content .suggest > div::before {
+main section.table-of-content .container .suggest > div,
+main section.table-of-content .container .suggest > div::before {
     border-radius: 5px;
     background: #111;
-    transition: all .2s ease;
+    transition: all .3s ease;
     opacity: 0;
 }
 
-main section.table-of-content .suggest > div.active,
-main section.table-of-content .suggest > div.active::before {
+main section.table-of-content .container .suggest > div.active,
+main section.table-of-content .container .suggest > div.active::before {
     opacity: 1;
 }
 
-main section.table-of-content .suggest > div::before {
+main section.table-of-content .container .suggest > div::before {
     content: '';
     display: block;
     position: relative;
@@ -153,10 +170,10 @@ main section.table-of-content .suggest > div::before {
     transition-delay: 50ms;
 }
 
-main section.table-of-content .suggest div {top: var(--t)}
-main section.table-of-content .suggest div::before {top: var(--t-b)}
+main section.table-of-content .container .suggest div {top: var(--t)}
+main section.table-of-content .container .suggest div::before {top: var(--t-b)}
 
-main section.table-of-content .suggest > div .card-content {
+main section.table-of-content .container .suggest > div .card-content {
     position: relative;
     display: block;
     top: -20px;
@@ -166,7 +183,7 @@ main section.table-of-content .suggest > div .card-content {
     padding: 6px 10px;
 }
 
-main section.table-of-content .suggest > div .card-content h3 {
+main section.table-of-content .container .suggest > div .card-content h3 {
     color: #25b;
     display: flex;
     flex-flow: column nowrap;
@@ -176,7 +193,7 @@ main section.table-of-content .suggest > div .card-content h3 {
     font-size: 1.3rem;
 }
 
-main section.table-of-content .suggest > div .card-content h3 span {
+main section.table-of-content .container .suggest > div .card-content h3 span {
     display: block;
     width: 80%;
     height: .5px;
@@ -185,7 +202,7 @@ main section.table-of-content .suggest > div .card-content h3 span {
     border-radius: 2px;
 }
 
-main section.table-of-content .suggest > div .card-content p {
+main section.table-of-content .container .suggest > div .card-content p {
     width: calc(100% - 30px);
     height: calc(100% - 80px);
     display: flex;
@@ -241,11 +258,13 @@ main section.story .content picture img {
     min-height: 50px;
     object-fit: contain;
     border-radius: 10px;
+    margin-left: 10px;
 }
 
 main section.story .content p {
     font-family: 'SourceSansPro-Regular';
     margin-bottom: .8em;
+    padding: 0 10px;
 }
 
 main section.story .content p a {
