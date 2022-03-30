@@ -1,7 +1,13 @@
 import Carousel from './carousel.js';
 import page from '../../pages/home.js';
 
-window.mobileAndTabletCheck = () => {
+/**
+ * Returns `true` if the device is a phone or tablet
+ * and returns `false` if the current media is a computer or another.
+ * 
+ * @returns {Boolean}
+ */
+const mobileAndTabletCheck = () => {
     let check = false;
 
     (function (a) {
@@ -12,9 +18,26 @@ window.mobileAndTabletCheck = () => {
     return check;
 };
 
-window.onloadeddata = () => {
-    
-}
+window.mobileAndTabletCheck = mobileAndTabletCheck;
+
+
+window.onloadeddata = setTimeout(function () {
+    // delete all potentials cookie that can spawn
+    const deleteCookie = (cookieName) => {
+        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    }
+
+    var a = decodeURIComponent(document.cookie).split(';')
+
+    a.map (
+        e => e.charAt(0) === ' '
+            ? e = e.split(' ')[1].split('=')[0]
+            : e.split('=')[0]
+    ).forEach (
+        e => deleteCookie(e)
+    );
+}, 500);
+
 
 window.onload = () => {
     // compelete page content
@@ -37,6 +60,10 @@ window.onload = () => {
         });
     } catch {console.warn("Menu icon not defined")};
     
+    /**
+     * Reload quickly the content of the page
+     * and apply responsive styles.
+     */
     const refreshStyles = () => {
         // scrollbar
         if (document.documentElement.scrollHeight > document.documentElement.clientHeight && !mobileAndTabletCheck())
