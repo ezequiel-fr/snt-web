@@ -289,8 +289,11 @@
                             console.log(n)
                         } setTimeout((
                             function () {
-                                window.location.href = "/401/index.html"
-                            }), 500)
+                                window.location.href = [
+                                    window.location.pathname.endsWith('/') ? '..' : '.',
+                                    "401/index.html"
+                                ].join('/');
+                            }), 200)
                     }
                 }
 

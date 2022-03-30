@@ -299,7 +299,7 @@ export default `
 
             <div class="content">
                 <ul class="info">
-                    <li><a href="./terms&conditions/index.html">Termes et conditions d'utilisation</a></li>
+                    <li><a href="./terms-and-conditions/index.html">Termes et conditions d'utilisation</a></li>
                     <li><a href="https://paypal.com/donate?hosted_button_id=BQ9VTYNAH3RRC" target="_blank" rel="noopener noreferrer">Faire un don</a></li>
                     <li><a href="https://github.com/TheRedMineTheRedMine" target="_blank">TheRedMine Ent.</a></li>
                     <li><a href="https://theredstream.000webhostapp.com" target="_blank">TheRedStream</a></li>
