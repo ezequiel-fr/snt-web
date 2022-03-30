@@ -73,9 +73,12 @@ export default `
         </ol>
 
         <div class="suggest">
-            <div data-href="#story">
+            <div data-href="#story" style="--t-b: 10px;">
                 <div class="card-content">
-                    <h3>L'histoire du web</h3>
+                    <h3>
+                        L'histoire du web
+                        <span></span>
+                    </h3>
 
                     <p>
                         Découvrez dans cette section découvrez qui est le
@@ -84,45 +87,66 @@ export default `
                </div> 
             </div>
 
-            <div data-href="#fundamentals">
+            <div data-href="#fundamentals" style="--t: 10px; --t-b: 24px">
                 <div class="card-content">
-                    <h3>Bases fondamentales</h3>
+                    <h3>
+                        Bases fondamentales
+                        <span></span>
+                    </h3>
                </div> 
             </div>
 
-            <div data-href="#fundamentals-html">
+            <div data-href="#fundamentals-html" style="--t: 20px; --t-b: 40px;">
                 <div class="card-content">
-                    <h3>Créer un fichier HTML</h3>
+                    <h3>
+                        Créer un fichier HTML
+                        <span></span>
+                    </h3>
                </div> 
             </div>
 
-            <div data-href="#fundamentals-html-files">
+            <div data-href="#fundamentals-html-files" style="--t: 32px; --t-b: 58px;">
                 <div class="card-content">
-                    <h3>Format HTML</h3>
+                    <h3>
+                        Format HTML
+                        <span></span>
+                    </h3>
                </div> 
             </div>
             
-            <div data-href="#fundamentals-html-code-format">
+            <div data-href="#fundamentals-html-code-format" style="--t: 60px; --t-b: 54px;">
                 <div class="card-content">
-                    <h3>Système de balises</h3>
+                    <h3>
+                        Système de balises
+                        <span></span>
+                    </h3>
                </div> 
             </div>
     
-            <div data-href="#fundamentals-css">
+            <div data-href="#fundamentals-css" style="--t: 80px; --t-b: 58px;">
                 <div class="card-content">
-                    <h3>Créer un fichier CSS</h3>
+                    <h3>
+                        Créer un fichier CSS
+                        <span></span>
+                    </h3>
                </div> 
             </div>
 
-            <div data-href="#fundamentals-css-files">
+            <div data-href="#fundamentals-css-files" style="--t: 100px; --t-b: 66px;">
                 <div class="card-content">
-                    <h3>Format CSS</h3>
+                    <h3>
+                        Format CSS
+                        <span></span>
+                    </h3>
                </div> 
             </div>
 
-            <div data-href="#fundamentals-css-code-format">
+            <div data-href="#fundamentals-css-code-format" style="--t: 130px; --t-b: 60px;">
                 <div class="card-content">
-                    <h3>Système d'écriture</h3>
+                    <h3>
+                        Système d'écriture
+                        <span></span>
+                    </h3>
                </div> 
             </div>
         </div>

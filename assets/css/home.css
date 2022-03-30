@@ -131,7 +131,7 @@ main section.table-of-content .suggest > div {
 main section.table-of-content .suggest > div,
 main section.table-of-content .suggest > div::before {
     border-radius: 5px;
-    background: #fffa;
+    background: #111;
     transition: all .2s ease;
     opacity: 0;
 }
@@ -153,28 +153,8 @@ main section.table-of-content .suggest > div::before {
     transition-delay: 50ms;
 }
 
-main section.table-of-content .suggest div[data-href="#story"]::before {top: 12px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals"] {top: 10px}
-main section.table-of-content .suggest div[data-href="#fundamentals"]::before {top: 24px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals-html"] {top: 20px}
-main section.table-of-content .suggest div[data-href="#fundamentals-html"]::before {top: 40px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals-html-files"] {top: 32px}
-main section.table-of-content .suggest div[data-href="#fundamentals-html-files"]::before {top: 58px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals-html-code-format"] {top: 60px}
-main section.table-of-content .suggest div[data-href="#fundamentals-html-code-format"]::before {top: 54px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals-css"] {top: 80px}
-main section.table-of-content .suggest div[data-href="#fundamentals-css"]::before {top: 58px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals-css-files"] {top: 100px}
-main section.table-of-content .suggest div[data-href="#fundamentals-css-files"]::before {top: 66px}
-
-main section.table-of-content .suggest div[data-href="#fundamentals-css-code-format"] {top: 130px}
-main section.table-of-content .suggest div[data-href="#fundamentals-css-code-format"]::before {top: 60px}
+main section.table-of-content .suggest div {top: var(--t)}
+main section.table-of-content .suggest div::before {top: var(--t-b)}
 
 main section.table-of-content .suggest > div .card-content {
     position: relative;
@@ -188,6 +168,35 @@ main section.table-of-content .suggest > div .card-content {
 
 main section.table-of-content .suggest > div .card-content h3 {
     color: #25b;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+
+main section.table-of-content .suggest > div .card-content h3 span {
+    display: block;
+    width: 80%;
+    height: .5px;
+    background: var(--primary-color);
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+main section.table-of-content .suggest > div .card-content p {
+    width: calc(100% - 30px);
+    height: calc(100% - 80px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'SourceSansPro-Regular';
+    font-size: .9rem;
+    color: var(--white);
+    padding: 5px;
 }
 /* end table of contents */
 
