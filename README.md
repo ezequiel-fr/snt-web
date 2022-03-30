@@ -27,3 +27,6 @@ Languages informatiques :
 Langues :
 - Français 🇫🇷
 - Anglais 🇬🇧
+
+### Notes
+- Pour des raisons de protection (un peu inutiles en l'occurence), le site est majoritairement contenu dans des pages JavaScript, voilà pourquoi il faut **impérativement** activer JavaScript sur le navigateur utilisé, auquel cas une page d'erreur apparaîtra.
