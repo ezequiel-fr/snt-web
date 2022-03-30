@@ -1,4 +1,5 @@
 import Carousel from './carousel.js';
+import page from '../../pages/home.js';
 
 window.mobileAndTabletCheck = () => {
     let check = false;
@@ -11,20 +12,30 @@ window.mobileAndTabletCheck = () => {
     return check;
 };
 
+window.onloadeddata = () => {
+    
+}
+
 window.onload = () => {
+    // compelete page content
+    var root = document.querySelector('div#root');
+    root.innerHTML = page;
+
     // carousels
     document.querySelectorAll('section .carousel').forEach(e => Carousel(e));
 
     // menu
-    const menuIcon = document.querySelector('header .icon-menu');
+    try {
+        const menuIcon = document.querySelector('header .icon-menu');
     
-    menuIcon.addEventListener('click', () => {
-        menuIcon.classList.toggle('active');
-        
-        document.querySelector('header .menu').classList[
-            menuIcon.classList.contains('active') ? 'add' : 'remove'
-        ]('active');
-    });
+        menuIcon.addEventListener('click', () => {
+            menuIcon.classList.toggle('active');
+            
+            document.querySelector('header .menu').classList[
+                menuIcon.classList.contains('active') ? 'add' : 'remove'
+            ]('active');
+        });
+    } catch {console.warn("Menu icon not defined")};
     
     const refreshStyles = () => {
         // scrollbar

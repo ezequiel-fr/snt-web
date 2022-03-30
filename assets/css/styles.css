@@ -96,6 +96,20 @@ h1, h2, h3, h4, h5, p, a, span {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+noscript {
+    width: 100vw;
+    height: 100vh;
+    position: static;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--black-2);
+    font-family: 'SourceSansPro-Regular';
+    color: var(--white-1);
+}
 /* basic rules end */
 
 body {
