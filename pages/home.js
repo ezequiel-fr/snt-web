@@ -298,13 +298,7 @@ export default `
         </div>
     </section>
 
-    <section class="test" id="two">
-        <div class="carousel">
-            <article>Test 1</article>
-            <article>Giuliano</article>
-            <article>Rien</article>
-        </div>
-    </section>
+    <!-- -->
 </main>
 
 <footer class="auto-reload">

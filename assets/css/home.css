@@ -281,15 +281,6 @@ main section.story .content p a:hover {
 }
 /* end story */
 
-main section.test {
-    background: var(--white);
-    overflow: hidden;
-}
-
-main section.test .carousel {
-    width: 720px;
-}
-
 @media (max-width: 700px) {
     main section.table-of-content .suggest {
         display: none;
