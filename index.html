@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
     <script type="module" src="./assets/js/app.js"></script>
-    <!-- <script disable-devtool-auto src="./assets/js/disable-devtool.js"></script> -->
+    <script disable-devtool-auto src="./assets/js/disable-devtool.js"></script>
     
 </head>
 <body>
@@ -33,13 +33,12 @@
     <script type="text/javascript">
         (function (urlSplitted) {
             // url
-            if (urlSplitted[urlSplitted.length - 1] == '') urlSplitted.pop();
             if (urlSplitted[urlSplitted.length - 1] == 'index.html') urlSplitted.pop();
             
             window.history.pushState (
                 {foo: 'foo'}, 'URL',
                 urlSplitted.join('/')
-                );
+            );
         }) (location.href.split('/')),
         (window.addEventListener('load', () => {
             setTimeout(function () {
