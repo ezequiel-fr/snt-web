@@ -44,6 +44,11 @@ window.onload = () => {
     var root = document.querySelector('div#root');
     root.innerHTML = page;
 
+    // global elements
+    document.header = document.querySelector('header');
+    document.footer = document.querySelector('footer');
+    document.main = document.querySelector('main');
+
     // carousels
     document.querySelectorAll('section .carousel').forEach(e => Carousel(e));
 
@@ -61,10 +66,28 @@ window.onload = () => {
 
         // header click events
         const headerElements = document.querySelectorAll('header .menu .custom-select');
+        
         headerElements.forEach(e => {
-            e.addEventListener('click', () => e.classList.toggle('active'));
+            e.addEventListener('click', () => {
+                if (e.classList.contains('active')) {
+                    headerElements.forEach(e => e.classList.remove('active'));
+                } else {
+                    headerElements.forEach(e => e.classList.remove('active'));
+                    e.classList.add('active');
+                }
+            });
         });
-    } catch {console.warn("Menu icon not defined")};
+
+        const closeAll = () => {
+            menuIcon.classList.remove('active');
+            document.querySelector('header .menu').classList.remove('active');
+
+            headerElements.forEach(e => e.classList.remove('active'));
+        };
+
+        document.main.addEventListener('click', closeAll);
+        document.footer.addEventListener('click', closeAll);
+    } catch {console.warn("Menu icon or header elements are not defined")};
     
     /**
      * Reload quickly the content of the page
@@ -77,11 +100,7 @@ window.onload = () => {
         
         // footer
         try {
-            if (document.querySelector('footer').classList.contains('auto-reload')) {
-                document.header = document.querySelector('header');
-                document.footer = document.querySelector('footer');
-                document.main = document.querySelector('main');
-    
+            if (document.querySelector('footer').classList.contains('auto-reload')) {    
                 document.main.style.minHeight = `calc(${Math.round(Math.abs(
                     document.documentElement.clientHeight - document.header.clientHeight - document.footer.clientHeight - 1
                 ))}px - 5em)`;
