@@ -58,6 +58,12 @@ window.onload = () => {
                 menuIcon.classList.contains('active') ? 'add' : 'remove'
             ]('active');
         });
+
+        // header click events
+        const headerElements = document.querySelectorAll('header .menu .custom-select');
+        headerElements.forEach(e => {
+            e.addEventListener('click', () => e.classList.toggle('active'));
+        });
     } catch {console.warn("Menu icon not defined")};
     
     /**

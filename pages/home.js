@@ -16,11 +16,61 @@ export default `
 
     <div class="menu">
         <nav class="content">
-            <ol>
-                <li><a href="#table-of-content">Sommaire</a></li>
-                <li><a href="#story">Historique</a></li>
-                <li><a href="#">Three</a></li>
-            </ol>
+            <ul>
+                <li>
+                    <a href="#table-of-content">Sommaire</a>
+                </li>
+
+                <li>
+                    <a href="#story">Historique</a>
+                </li>
+
+                <li class="custom-select">
+                    <p>
+                        HTML
+                        <span>
+                            <span></span>
+                        </span>
+                    </p>
+
+                    <div>
+                        <div class="box">
+                            <ul>
+                                <li>
+                                    <a href="#fundamentals-html-files">Format</a>
+                                </li>
+
+                                <li>
+                                    <a href="#fundamentals-html-code-format">Fonctionnement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="custom-select">
+                    <p>
+                        CSS
+                        <span>
+                            <span></span>
+                        </span>
+                    </p>
+
+                    <div class="css">
+                        <div class="box">
+                            <ul>
+                                <li>
+                                    <a href="#fundamentals-css-files">Format</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#fundamentals-css-code-format">Fonctionnement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </nav>
     </div>
 </header>

@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
     <script type="module" src="./assets/js/app.js"></script>
-    <script disable-devtool-auto src="./assets/js/disable-devtool.js"></script>
+    <!-- <script disable-devtool-auto src="./assets/js/disable-devtool.js"></script> -->
     
 </head>
 <body>
@@ -41,22 +41,24 @@
                 urlSplitted.join('/')
                 );
         }) (location.href.split('/')),
-        (window.addEventListener('load', () => setTimeout(function () {
-            // table of content - tof (summary)
-            const tofLinks = document.querySelectorAll('main section.table-of-content ol li a');
-            
-            tofLinks.forEach(e => {
-                if (e.href.includes(`${location.pathname}#`)) {
-                    var url = e.href.split('/')[e.href.split('/').length - 1],
-                        el = document.querySelector(`main section.table-of-content .suggest div[data-href="${url}"]`)
-  
-                    if (undefined != url && el) {
-                        e.addEventListener('mouseover', () => el.classList.add('active'));
-                        e.addEventListener('mouseout', () => el.classList.remove('active'));
+        (window.addEventListener('load', () => {
+            setTimeout(function () {
+                // table of content - tof (summary)
+                const tofLinks = document.querySelectorAll('main section.table-of-content ol li a');
+                
+                tofLinks.forEach(e => {
+                    if (e.href.includes(`${location.pathname}#`)) {
+                        var url = e.href.split('/')[e.href.split('/').length - 1],
+                            el = document.querySelector(`main section.table-of-content .suggest div[data-href="${url}"]`)
+    
+                        if (undefined != url && el) {
+                            e.addEventListener('mouseover', () => el.classList.add('active'));
+                            e.addEventListener('mouseout', () => el.classList.remove('active'));
+                        }
                     }
-                }
-            });
-        }, 200)));
+                });
+            }, 200);
+        }));
 
         // document.documentElement.scrollTop += 20
     </script>
