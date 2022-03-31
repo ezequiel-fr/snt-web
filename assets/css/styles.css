@@ -257,7 +257,7 @@ header .menu {
     display: block;
     position: relative;
     opacity: 50%;
-    top: -50px;
+    top: -100px;
     height: 50px;
     z-index: 10;
     background: var(--black-2);
