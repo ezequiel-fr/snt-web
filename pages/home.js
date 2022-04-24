@@ -310,7 +310,7 @@ export default `
                 <p>
                     <span class="title">Cod'ons</span> est un site fait uniquement pour un travail
                     en SNT (Sciences Numériques et Technologiques).<br>
-                    Il n'a pour but que de montrer certaines bases en développement web d'une autre approche.
+                    <!-- Il n'a pour but que de montrer certaines bases en développement web d'une autre approche. -->
                 </p>
 
                 <ul>
