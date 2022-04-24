@@ -25,7 +25,7 @@ export default `
                     <a href="#story">Historique</a>
                 </li>
 
-                <li class="custom-select">
+                <!-- <li class="custom-select">
                     <p>
                         HTML
                         <span>
@@ -69,7 +69,7 @@ export default `
                             </ul>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </div>
@@ -97,7 +97,7 @@ export default `
                     <a href="#story">L'histoire du web</a>
                 </li>
 
-                <li class="childs">
+                <!-- <li class="childs">
                     <a href="#fundamentals" data-content="Bases fondamentales">Bases fondamentales</a>
 
                     <ol class="sub">
@@ -119,7 +119,7 @@ export default `
                             </ol>
                         </li>
                     </ol>
-                </li>
+                </li> -->
 
                 
                 <li><a href="#footer">A propos de nous</a></li>
@@ -345,7 +345,7 @@ export default `
                 <ul class="info">
                     <li><a href="./terms-and-conditions/index.html">Termes et conditions d'utilisation</a></li>
                     <li><a href="https://paypal.com/donate?hosted_button_id=BQ9VTYNAH3RRC" target="_blank" rel="noopener noreferrer">Faire un don</a></li>
-                    <li><a href="https://github.com/TheRedMineTheRedMine" target="_blank">TheRedMine Ent.</a></li>
+                    <li><a href="https://github.com/Cod-ons/.github/blob/main/profile/TheRedMine%20Ent.md" target="_blank">TheRedMine Ent.</a></li>
                     <li><a href="https://theredstream.000webhostapp.com" target="_blank">TheRedStream</a></li>
                 </ul>
             </div>
@@ -378,7 +378,7 @@ export default `
 
     <div class="copyright">
         Copyright &copy; 2022-2023 -
-        <a href="#" target="_blank" rel="noopener noreferrer">TheRedMine Ent.</a>
+        <a href="https://github.com/Cod-ons/.github/blob/main/profile/TheRedMine%20Ent.md" target="_blank" rel="noopener noreferrer">TheRedMine Ent.</a>
         - Tout droits réservés
     </div>
 </footer>`;
